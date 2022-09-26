@@ -23,7 +23,8 @@ from itertools import permutations
 
 """
 INPUT: n, k as int
-sum_to_n is a helper function to find all possible ways to 
+sum_to_n is a helper function to find all possible ways to sum to an integer n, with k integers in the sum
+OUTPUT: generator of lists of k integers that sum to n
 """
 def sum_to_n(n: int,k: int,limit: int = None):
     if k==1:
@@ -85,8 +86,5 @@ def max_beauty(arr: list,k: int):
                 max_b = beauty(config,k)
 
     return max_b
-
-for sumi in sum_to_n(10, 4):
-    print(sumi)
 
 print(max_beauty(arr, k))
